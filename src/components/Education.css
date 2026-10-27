@@ -1,0 +1,37 @@
+.education { background: #07111e; padding: 100px 0; }
+
+.edu-list { display: flex; flex-direction: column; gap: 14px; max-width: 860px; margin: 0 auto; }
+
+.edu-item {
+  display: flex; align-items: center; gap: 18px;
+  background: #0f1e38; border: 1px solid #1a2e50;
+  border-radius: 16px; padding: 22px 26px; transition: all 0.3s;
+  opacity: 0; transform: translateY(18px);
+}
+.edu-item.visible { opacity: 1; transform: translateY(0); }
+.edu-item:hover { border-color: rgba(26,111,204,0.4); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+.edu-ico {
+  width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+  background: rgba(26,111,204,0.12); border: 1px solid rgba(26,111,204,0.22);
+  display: flex; align-items: center; justify-content: center; transition: all 0.3s;
+}
+.edu-ico i { color: #4da6ff; font-size: 1.1rem; }
+.edu-item:hover .edu-ico { background: #1a6fcc; }
+.edu-item:hover .edu-ico i { color: #fff; }
+
+.edu-info { flex: 1; }
+.edu-info h4 { font-size: 0.97rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.edu-info p { font-size: 0.82rem; color: #4da6ff; margin-bottom: 2px; }
+.edu-info span { font-size: 0.74rem; color: #6888b8; }
+
+.edu-badge {
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: #4da6ff;
+  background: rgba(26,111,204,0.10); border: 1px solid rgba(26,111,204,0.25);
+  padding: 6px 12px; border-radius: 8px; flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .edu-item { flex-wrap: wrap; }
+  .edu-badge { width: 100%; text-align: center; }
+}

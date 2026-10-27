@@ -1,0 +1,126 @@
+.about-sec {
+  background: #ffffff;
+  padding: 80px 5%;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.ab-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1px 1fr 1px 0.75fr;
+  gap: 0 48px;
+  align-items: start;
+}
+
+/* Animation */
+.ab-anim {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.ab-anim.ab-visible { opacity: 1; transform: translateY(0); }
+.ab-mid.ab-anim  { transition-delay: 0.15s; }
+.ab-right.ab-anim { transition-delay: 0.3s; }
+
+/* Vertical dividers */
+.ab-divider {
+  width: 1px; background: #e0eaf5;
+  height: 100%; min-height: 240px;
+}
+
+/* Eyebrow */
+.ab-eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 3px;
+  color: #1a6fcc; text-transform: uppercase; margin-bottom: 1rem;
+}
+.ab-line { display: block; width: 28px; height: 2px; background: #1a6fcc; border-radius: 2px; }
+
+.ab-title {
+  font-size: clamp(1.5rem,2.5vw,2.1rem); font-weight: 900;
+  color: #0a1628; line-height: 1.25; margin-bottom: 1.2rem;
+}
+.ab-hl {
+  background: linear-gradient(135deg,#1a6fcc,#00aaff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.ab-desc { font-size: 0.9rem; color: #4a6a8a; line-height: 1.8; margin-bottom: 1rem; }
+.ab-tamil { font-family: 'Noto Sans Tamil',sans-serif; font-size: 0.85rem; color: #7090b0; }
+
+.ab-btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  color: #fff; background: linear-gradient(135deg,#1a6fcc,#0055aa);
+  padding: 11px 24px; border-radius: 50px; font-size: 0.88rem; font-weight: 700;
+  box-shadow: 0 4px 20px rgba(26,111,204,0.38); transition: all 0.3s; margin-top: 1rem;
+  border: none;
+}
+.ab-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,111,204,0.55); }
+.ab-btn i { transition: transform 0.3s; }
+.ab-btn:hover i { transform: translateX(5px); }
+
+/* Middle features */
+.ab-mid { display: flex; flex-direction: column; gap: 20px; padding-top: 4px; }
+.ab-feat { display: flex; align-items: flex-start; gap: 14px; cursor: default; }
+.ab-feat-ico {
+  width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(26,111,204,0.1); border: 1px solid rgba(26,111,204,0.2);
+  display: flex; align-items: center; justify-content: center; transition: all 0.3s;
+}
+.ab-feat-ico i { color: #1a6fcc; font-size: 0.95rem; }
+.ab-feat:hover .ab-feat-ico { background: #1a6fcc; border-color: #1a6fcc; }
+.ab-feat:hover .ab-feat-ico i { color: #fff; }
+.ab-feat h4 { font-size: 0.9rem; font-weight: 700; color: #1a6fcc; margin-bottom: 3px; transition: color 0.3s; }
+.ab-feat:hover h4 { color: #0055aa; }
+.ab-feat p  { font-size: 0.8rem; color: #6888b8; }
+
+/* Right stats */
+.ab-right { text-align: left; padding-top: 4px; }
+.ab-over  { font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; color: #8ab0d0; text-transform: uppercase; }
+.ab-num   {
+  font-size: 5.5rem; font-weight: 900; line-height: 1;
+  background: linear-gradient(135deg,#1a6fcc,#00aaff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.ab-num span { font-size: 3.5rem; }
+.ab-years { font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; color: #0a1628; text-transform: uppercase; line-height: 1.6; margin-bottom: 14px; }
+.ab-hr    { width: 50px; height: 2px; background: linear-gradient(to right,#1a6fcc,transparent); margin-bottom: 14px; }
+.ab-script em { font-family: 'Georgia',serif; font-style: italic; font-size: 1.3rem; color: #0a1628; line-height: 1.5; }
+
+@media (max-width: 960px) {
+  .ab-inner { grid-template-columns: 1fr; gap: 40px; }
+  .ab-divider { display: none; }
+  .ab-right { text-align: center; }
+  .ab-hr { margin: 0 auto 14px; }
+}
+
+@media (max-width: 768px) {
+  .about-sec { padding: 60px 4%; }
+
+  .ab-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .ab-divider { display: none; }
+
+  /* Center-align the whole section on mobile */
+  .ab-left,
+  .ab-mid,
+  .ab-right { text-align: center; }
+
+  .ab-eyebrow { justify-content: center; }
+  .ab-btn     { display: flex; justify-content: center; }
+  .ab-feat    { flex-direction: column; align-items: center; text-align: center; }
+  .ab-feat-ico { margin: 0 auto; }
+
+  /* Stats row: 3 equal columns side-by-side */
+  .ab-right { display: flex; flex-direction: column; align-items: center; }
+  .ab-hr { margin: 0 auto 14px; }
+
+  .ab-num { font-size: 4rem; }
+  .ab-num span { font-size: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .ab-title { font-size: 1.5rem; }
+  .ab-desc  { font-size: 0.88rem; }
+}

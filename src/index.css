@@ -1,0 +1,44 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --font: 'Inter', sans-serif;
+  --tamil: 'Noto Sans Tamil', sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  background: #07111e;
+  color: #e0ecff;
+  font-family: var(--font);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a   { -webkit-tap-highlight-color: transparent; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #07111e; }
+::-webkit-scrollbar-thumb { background: #1a6fcc; border-radius: 4px; }
+::selection { background: rgba(26,111,204,0.25); color: #4da6ff; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+.sec-tag {
+  font-size: 0.67rem; letter-spacing: 4px; text-transform: uppercase;
+  color: #4da6ff; font-weight: 700; margin-bottom: 10px;
+  display: block; text-align: center;
+}
+
+.sec-title {
+  font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800;
+  color: #fff; text-align: center; margin-bottom: 60px; letter-spacing: -0.5px;
+}
+
+/* Global mobile adjustments */
+@media (max-width: 768px) {
+  html { scroll-padding-top: 64px; }
+  .sec-title { margin-bottom: 40px; }
+}

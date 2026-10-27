@@ -1,0 +1,97 @@
+.footer { background: #040c18; border-top: 1px solid #1a2e50; }
+
+.footer-top {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr;
+  gap: 48px; padding: 60px 5% 50px;
+}
+
+/* Brand */
+.ft-brand { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0; grid-column: 1; }
+.ft-logo {
+  font-family: 'Inter',sans-serif; font-weight: 900;
+  font-size: 2rem; letter-spacing: -1px; line-height: 1; flex-shrink: 0;
+}
+.ft-sc { background: linear-gradient(135deg,#4da6ff,#1a6fcc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ft-bc { color: #fff; }
+.ft-name    { font-size: 0.75rem; font-weight: 700; color: #fff; line-height: 1.4; }
+.ft-tagline { font-size: 0.6rem; color: #4da6ff; letter-spacing: 1.5px; margin-top: 3px; }
+
+/* Desc */
+.ft-desc p    { font-size: 0.85rem; color: #6888b8; line-height: 1.75; margin-bottom: 8px; }
+.ft-tamil     { font-family: 'Noto Sans Tamil',sans-serif; font-size: 0.82rem; color: #4d6888; }
+
+/* Links */
+.ft-links h4, .ft-contact h4 {
+  font-size: 0.78rem; font-weight: 700; color: #fff;
+  letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 18px; padding-bottom: 10px;
+  border-bottom: 1px solid #1a2e50;
+}
+.ft-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.ft-links li a {
+  text-decoration: none; color: #6888b8; font-size: 0.85rem;
+  display: flex; align-items: center; gap: 8px; transition: all 0.3s;
+}
+.ft-links li a i { font-size: 0.6rem; color: #4da6ff; transition: transform 0.3s; }
+.ft-links li a:hover { color: #4da6ff; padding-left: 4px; }
+.ft-links li a:hover i { transform: translateX(3px); }
+
+/* Contact */
+.ft-ci {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.83rem; color: #6888b8; margin-bottom: 12px;
+}
+.ft-ci i { color: #4da6ff; width: 14px; flex-shrink: 0; }
+.ft-ci a { color: #6888b8; text-decoration: none; transition: color 0.3s; }
+.ft-ci a:hover { color: #4da6ff; }
+
+.ft-socials { display: flex; gap: 10px; margin-top: 16px; }
+.ft-s {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(77,166,255,0.08); border: 1px solid rgba(77,166,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: #6888b8; font-size: 0.82rem; transition: all 0.3s;
+}
+.ft-s:hover { background: #1a6fcc; border-color: #1a6fcc; color: #fff; transform: translateY(-3px); }
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid #1a2e50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 5%; flex-wrap: wrap; gap: 12px;
+  max-width: 100%;
+}
+.footer-bottom p { font-size: 0.75rem; color: #3a5070; }
+.ft-quote { display: flex; align-items: center; gap: 8px; }
+.ft-quote i { color: rgba(201,151,58,0.4); }
+.ft-quote { font-family: 'Noto Sans Tamil',sans-serif; color: rgba(201,151,58,0.6); font-size: 0.82rem; font-weight: 600; }
+
+@media (max-width: 960px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 600px) {
+  .footer-top { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 4% 30px;
+  }
+  .ft-brand { align-items: center; justify-content: center; text-align: center; flex-direction: column; }
+  .ft-desc  { text-align: center; }
+  .ft-links ul { align-items: center; }
+  .ft-ci    { justify-content: center; }
+  .ft-socials { justify-content: center; }
+  .ft-links h4, .ft-contact h4 { text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 10px; padding: 16px 4%; }
+}
+
+@media (max-width: 480px) {
+  .ft-logo { font-size: 1.6rem; }
+  .ft-name { font-size: 0.7rem; }
+}
