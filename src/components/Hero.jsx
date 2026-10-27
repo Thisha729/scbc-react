@@ -17,9 +17,9 @@ export default function Hero() {
         {/* Right: person photo full bleed */}
         <div className="hero-photo-bg">
           <img
-            src="/hero-bg.jpg"
+            src="./hero-bg.jpg"
             alt="Shalashian — S&C Business Consultants"
-            onError={e => { e.target.src = '/sco.jpg' }}
+            onError={e => { e.target.src = './sco.jpg' }}
           />
           {/* Left fade overlay so text is readable */}
           <div className="hero-fade" />

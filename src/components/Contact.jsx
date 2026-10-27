@@ -50,7 +50,7 @@ export default function Contact() {
     <section className="contact-section" id="contact" ref={ref}>
       {/* BG photo */}
       <div className="ct-photo-bg">
-        <img src="/sco.jpg" alt="" onError={e => e.target.style.display='none'} />
+        <img src="./sco.jpg" alt="" onError={e => e.target.style.display='none'} />
         <div className="ct-overlay" />
       </div>
 
